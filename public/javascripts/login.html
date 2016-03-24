@@ -1,0 +1,14 @@
+<form ng-submit="login.submit()">
+
+    <input data-ng-model="login.username" id="username" type="text" placeholder="username"/>
+
+
+    <input data-ng-model="login.password" id="password" type="password" placeholder="password"/>
+
+    <button type="submit" name="action">Log In
+    </button>
+
+    <div data-ng-bind="login.Message">
+
+    </div>
+</form>
