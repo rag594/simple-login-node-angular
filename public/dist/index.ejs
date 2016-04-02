@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <style>
+    .navbar { border-radius:0; }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular-resource.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js">
+  </script>
+  <script type="text/javascript" src="/javascripts/app.js"></script>
+  <script type="text/javascript" src="/javascripts/HomeController.js"></script>
+  <script type="text/javascript" src="/javascripts/HomeFactory.js"></script>
+  <script type="text/javascript" src="/javascripts/LoginController.js"></script>
+  <script type="text/javascript" src="/javascripts/ProfileController.js"></script>
+
+</head>
+
+<body ng-app="sense8" ng-controller="HomeController as home">
+
+
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="navbar-header">
+    <a class="navbar-brand" ui-sref="#">Another Page</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li><a ui-sref="home">Home</a></li>
+    <li><a ui-sref="about">Page</a></li>
+    <li ng-if="home.loggedin"><a ng-click="home.logout()" ui-sref="home">
+        Logout</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+  <div ui-view>
+  </div>
+
+</div>
+
+</body>
+</html>
